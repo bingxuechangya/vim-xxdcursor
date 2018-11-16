@@ -1,6 +1,6 @@
 function! s:highlight()
   if exists('s:match') && s:match != -1
-    call matchdelete(s:match)
+    silent! call matchdelete(s:match)
     unlet s:match
   endif
   let syn = synIDattr(synID(line('.'), col('.'), 1), 'name')
